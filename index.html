@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
@@ -23,6 +24,7 @@
     </div>
   </header>
 
+  <!-- Main -->
   <main>
     <!-- Hero -->
     <section class="hero" id="accueil">
@@ -36,7 +38,7 @@
           </div>
         </div>
         <div class="hero-right">
-          <div class="avatar" aria-hidden="true">Photo</div>
+          <img src="photo.jpg" alt="Cyril Bimbi" class="avatar">
         </div>
       </div>
     </section>
@@ -70,80 +72,54 @@
     <!-- Projets -->
     <section id="projets" class="section container">
       <h3>Projets</h3>
-
       <article class="project">
         <h4>Distributeur connecté — Gestion base de données</h4>
-        <p><em>Projet scolaire / prototype</em> — Conception d'un système de distribution automatique avec : interface de gestion, API serveur, et base de données SQL pour la gestion des stocks, transactions et journaux. J'ai développé la couche d'accès aux données, les requêtes optimisées et les scripts d'import/export. Ce projet m'a permis de travailler sur l'intégrité des données et la communication client/serveur.</p>
+        <p><em>Projet scolaire / prototype</em> — Conception d'un système de distribution automatique avec interface de gestion, API serveur et base de données SQL. Développement de la couche d'accès aux données, requêtes optimisées et scripts d'import/export.</p>
         <ul>
-          <li>Technos : Python (backend), SQLite / MySQL (SQL), scripts d'automatisation Bash</li>
-          <li>Fonctions clés : gestion des stocks, journalisation des transactions, import/export CSV, scripts de déploiement</li>
+          <li>Technos : Python, SQLite / MySQL, Bash</li>
+          <li>Fonctions clés : gestion des stocks, journalisation des transactions, import/export CSV</li>
         </ul>
       </article>
-
     </section>
 
     <!-- Contact -->
     <section id="contact" class="section container contact-section">
       <h3>Contact</h3>
       <p>Décris ton projet ci-dessous — je te réponds rapidement.</p>
-
-      <!-- Netlify Forms: name + data-netlify + honeypot -->
       <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
-        <!-- Honeypot -->
         <input type="hidden" name="form-name" value="contact">
         <p class="hidden"><label>Ne pas remplir : <input name="bot-field"></label></p>
-
-        <label>
-          <span>Nom</span>
-          <input type="text" name="name" required>
-        </label>
-
-        <label>
-          <span>Email</span>
-          <input type="email" name="email" required>
-        </label>
-
-        <label>
-          <span>Objet</span>
-          <input type="text" name="subject" placeholder="Ex : Dev Python / Admin Réseau" required>
-        </label>
-
-        <label>
-          <span>Message</span>
-          <textarea name="message" rows="6" required></textarea>
-        </label>
-
+        <label><span>Nom</span><input type="text" name="name" required></label>
+        <label><span>Email</span><input type="email" name="email" required></label>
+        <label><span>Objet</span><input type="text" name="subject" placeholder="Ex : Dev Python / Admin Réseau" required></label>
+        <label><span>Message</span><textarea name="message" rows="6" required></textarea></label>
         <div class="form-actions">
           <button type="submit" class="btn">Envoyer</button>
           <button type="button" id="mailtoFallback" class="btn-outline">Envoyer par mail</button>
         </div>
-
         <p id="formMsg" class="form-msg" aria-live="polite"></p>
       </form>
-
       <p class="contact-direct">Ou contacte-moi directement : <a href="mailto:cyrilbimbi13@gmail.com">cyrilbimbi13@gmail.com</a></p>
     </section>
 
     <!-- Mentions légales & Politique de confidentialité -->
     <section id="legal" class="section container legal-section">
       <h3>Mentions légales & Politique de confidentialité</h3>
-
       <div class="legal-block">
         <h4>Mentions légales</h4>
         <p>Éditeur : <strong>Cyril Bimbi</strong><br>
         Adresse e-mail : <a href="mailto:cyrilbimbi13@gmail.com">cyrilbimbi13@gmail.com</a></p>
         <p>Hébergement : Netlify, Inc. — https://www.netlify.com/</p>
       </div>
-
       <div class="legal-block">
         <h4>Politique de confidentialité</h4>
-        <p>Les informations collectées via le formulaire (nom, e-mail, objet, message) sont utilisées uniquement pour répondre à vos demandes. Elles ne sont pas partagées à des tiers sans votre consentement. Les données sont conservées dans l'outil de gestion de formulaires de l'hébergeur (Netlify) et peuvent être supprimées sur demande à l'adresse e-mail indiquée ci-dessus.</p>
-        <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant ; pour l'exercer, contactez : <a href="mailto:cyrilbimbi13@gmail.com">cyrilbimbi13@gmail.com</a>.</p>
+        <p>Les informations collectées via le formulaire sont utilisées uniquement pour répondre à vos demandes et ne sont pas partagées à des tiers. Les données sont conservées par l’hébergeur Netlify et peuvent être supprimées sur demande.</p>
+        <p>Droits RGPD : accès, rectification, suppression — contactez : <a href="mailto:cyrilbimbi13@gmail.com">cyrilbimbi13@gmail.com</a></p>
       </div>
     </section>
-
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
       <p>&copy; <span id="year"></span> Cyril Bimbi — Freelance • <a href="#legal">Mentions légales & Politique</a></p>

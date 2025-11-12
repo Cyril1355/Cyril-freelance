@@ -19,6 +19,50 @@ body{
   -moz-osx-font-smoothing:grayscale;
 }
 
+/* Hero */
+.hero {
+  padding: 44px 0;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap; /* responsive */
+}
+
+.hero-left {
+  flex: 1;
+}
+
+/* Avatar photo ronde */
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border: 3px solid var(--accent);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .avatar {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+
 /* container */
 .container{max-width:var(--container);margin:0 auto;padding:0 20px}
 
@@ -29,13 +73,6 @@ body{
 .tag{margin:4px 0 0;color:var(--muted);font-size:0.9rem}
 .nav a{margin-left:18px;text-decoration:none;color:var(--muted)}
 .nav .cta{background:var(--accent);color:white;padding:8px 12px;border-radius:8px;margin-left:18px;text-decoration:none}
-
-/* hero */
-.hero{padding:44px 0;display:flex;align-items:center}
-.hero-inner{display:flex;gap:30px;align-items:center}
-.hero-left{flex:1}
-.hero-right{width:180px;height:180px;display:flex;align-items:center;justify-content:center}
-.avatar{width:160px;height:160px;background:#f3f4f6;border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
 
 /* CTAs */
 .hero-cta{margin-top:16px;display:flex;gap:12px}
