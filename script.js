@@ -1,35 +1,30 @@
-document.getElementById('year').textContent = new Date().getFullYear();
+const reviewForm = document.getElementById('reviewForm');
+const reviewMsg = document.getElementById('reviewMsg');
 
-const contactForm = document.getElementById('contactForm');
-const formMsg = document.getElementById('formMsg');
-
-if (contactForm) {
-  contactForm.addEventListener('submit', function(e) {
+if (reviewForm) {
+  reviewForm.addEventListener('submit', function(e) {
     e.preventDefault();
+    reviewMsg.textContent = "Envoi de votre avis...";
     
-    formMsg.textContent = "Envoi en cours...";
-    formMsg.style.color = "white";
-
-    const formData = new FormData(contactForm);
+    const formData = new FormData(reviewForm);
     
-    // Envoi vers Netlify
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      body: new URLSearchParams(formData).toString()
     })
-    .then((response) => {
+    .then(response => {
       if (response.ok) {
-        formMsg.textContent = "Merci Cyril a bien reçu ton message !";
-        formMsg.style.color = "#4ade80"; // Vert
-        contactForm.reset();
+        reviewMsg.textContent = "Merci ! Votre avis a été envoyé pour vérification.";
+        reviewMsg.style.color = "#4ade80";
+        reviewForm.reset();
       } else {
         throw new Error();
       }
     })
-    .catch((error) => {
-      formMsg.textContent = "Oups ! Erreur. Utilise mon mail direct en attendant.";
-      formMsg.style.color = "#f87171"; // Rouge
+    .catch(() => {
+      reviewMsg.textContent = "Erreur lors de l'envoi de l'avis.";
+      reviewMsg.style.color = "#f87171";
     });
   });
 }
