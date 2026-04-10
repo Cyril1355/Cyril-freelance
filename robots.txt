@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cyril1355.github.io/Cyril-freelance/sitemap.xml
