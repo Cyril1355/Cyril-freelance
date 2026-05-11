@@ -278,3 +278,30 @@ body {
   .form-row { flex-direction: column; gap: 0; }
   .review-form-wrapper { padding: 25px; }
 }
+
+/* --- FOOTER --- */
+.site-footer {
+  padding: 40px 0; /* Espace au-dessus et en dessous */
+  border-top: 1px solid var(--border); /* Petite ligne de séparation discrète */
+  margin-top: 60px; /* Espace par rapport à la section précédente */
+}
+
+.site-footer .container {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center;
+}
+
+.site-footer p {
+  color: var(--text-light); /* Couleur grise pour ne pas surcharger visuellement */
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Responsive : ajustement de la taille du texte sur mobile */
+@media (max-width: 600px) {
+  .site-footer p {
+    font-size: 0.9rem;
+  }
+}
