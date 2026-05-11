@@ -112,7 +112,7 @@
     </div>
 
     <div class="project-visual">
-        <img src="trésorerie.png" alt="Aperçu de l'interface Pilote de Trésorerie Freelance" class="project-screenshot">
+        <img src="tresorerie.png" alt="Aperçu de l'interface Pilote de Trésorerie Freelance" class="project-screenshot">
     </div>
 
   </article>
@@ -143,23 +143,21 @@
       </div>
     </section>
 
-   <section id="avis" class="section container">
+<section id="temoignages" class="section container">
   <div class="section-header">
-    <span class="badge">Retours d'expérience</span>
     <h3>Ce que disent mes clients</h3>
+    <p class="section-subtitle">La satisfaction client est au cœur de ma démarche freelance.</p>
   </div>
 
   <div class="reviews-grid">
     <article class="review-card">
       <div class="review-rating">⭐⭐⭐⭐⭐</div>
       <p class="review-text">"Cyril a su comprendre mes besoins techniques complexes pour mon réseau IoT. Un travail propre et une documentation claire. Je recommande !"</p>
-      <div class="review-footer">
-        <div class="client-info">
-          <div class="client-avatar">JM</div>
-          <div>
-            <p class="client-name">Julien M.</p>
-            <p class="client-job">Gérant Tech Solution</p>
-          </div>
+      <div class="client-info">
+        <div class="client-avatar">JM</div>
+        <div class="client-details">
+          <p class="client-name">Julien M.</p>
+          <p class="client-job">Gérant Tech Solution</p>
         </div>
       </div>
     </article>
@@ -167,13 +165,11 @@
     <article class="review-card">
       <div class="review-rating">⭐⭐⭐⭐⭐</div>
       <p class="review-text">"Excellent développeur. Son expertise en Python nous a permis d'automatiser nos scripts de sauvegarde en un temps record."</p>
-      <div class="review-footer">
-        <div class="client-info">
-          <div class="client-avatar">AL</div>
-          <div>
-            <p class="client-name">Anne L.</p>
-            <p class="client-job">Responsable IT</p>
-          </div>
+      <div class="client-info">
+        <div class="client-avatar">AL</div>
+        <div class="client-details">
+          <p class="client-name">Anne L.</p>
+          <p class="client-job">Responsable IT</p>
         </div>
       </div>
     </article>
@@ -185,32 +181,30 @@
       <p>Votre avis est précieux pour mon activité.</p>
     </div>
     
-    <form action="https://formspree.io/f/xbdawpdj" method="POST" class="modern-form">
-      <input type="hidden" name="_next" value="https://Cyril1355.github.io/Cyril-freelance/merci.html">
-      
+    <form class="styled-form">
       <div class="form-row">
         <div class="input-group">
           <label>Votre Nom</label>
-          <input type="text" name="name" placeholder="Ex: Jean Dupont" required>
+          <input type="text" placeholder="Ex: Jean Dupont">
         </div>
-        <div class="input-group">
-          <label>Note</label>
-          <select name="rating" required>
-            <option value="5">⭐⭐⭐⭐⭐ (Excellent)</option>
-            <option value="4">⭐⭐⭐⭐ (Très bien)</option>
-            <option value="3">⭐⭐⭐ (Bien)</option>
-            <option value="2">⭐⭐ (Moyen)</option>
-            <option value="1">⭐ (Insuffisant)</option>
-          </select>
-        </div>
+          <div class="input-group">
+            <label>Note</label>
+            <select id="review-rating-select">
+              <option value="5">⭐⭐⭐⭐⭐ (Excellent)</option>
+              <option value="4">⭐⭐⭐⭐ (Très bon)</option>
+              <option value="3">⭐⭐⭐ (Bon)</option>
+              <option value="2">⭐⭐ (Moyen)</option>
+              <option value="1">⭐ (Insuffisant)</option>
+            </select>
+          </div>
       </div>
       
       <div class="input-group">
         <label>Votre message</label>
-        <textarea name="comment" rows="4" placeholder="Qu'avez-vous pensé de notre collaboration ?" required></textarea>
+        <textarea rows="4" placeholder="Qu'avez-vous pensé de notre collaboration ?"></textarea>
       </div>
       
-      <button type="submit" class="btn-outline-full">Envoyer mon avis</button>
+      <button type="submit" class="btn-shine">Envoyer mon avis</button>
     </form>
   </div>
 </section>
