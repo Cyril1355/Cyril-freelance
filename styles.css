@@ -100,7 +100,7 @@ body {
 
 .skill-icon { font-size: 2.5rem; display: block; margin-bottom: 15px; }
 
-/* --- SECTION PROJETS (MODIFIÉE POUR L'IMAGE) --- */
+/* --- SECTION PROJETS --- */
 .project-card-premium {
   background: var(--bg);
   border: 1px solid var(--border);
@@ -110,7 +110,11 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Layout spécifique pour le projet avec image */
+.project-card-premium:hover {
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.08);
+}
+
 .project-with-visual {
   display: flex;
   align-items: center;
@@ -152,26 +156,103 @@ body {
   color: var(--text-light);
 }
 
-/* --- WEB SECTION & MOCKUP --- */
-.web-section { background: var(--bg-alt); padding: 80px 0; }
-.web-grid { display: flex; align-items: center; gap: 40px; }
-.browser-mockup { 
-  background: white; 
-  border-radius: 12px; 
-  border: 1px solid var(--border); 
-  width: 100%;
-  max-width: 400px; 
-}
-.browser-header { background: #f1f5f9; padding: 10px; display: flex; gap: 6px; border-radius: 12px 12px 0 0; }
-.browser-dot { width: 8px; height: 8px; border-radius: 50%; }
-.red { background: #ff5f56; } .yellow { background: #ffbd2e; } .green { background: #27c93f; }
-.mockup-content { padding: 30px; text-align: center; }
-.mockup-ok-badge { background: #dcfce7; color: #166534; padding: 5px 12px; border-radius: 50px; font-weight: 800; font-size: 0.8rem; }
+/* --- SECTION AVIS & TEMOIGNAGES --- */
+.section-header { text-align: center; margin-bottom: 50px; }
+.section-subtitle { color: var(--text-light); font-size: 1.1rem; }
 
-/* --- CONTACT CARD --- */
-.contact-card-premium { display: flex; background: #0f172a; border-radius: 24px; overflow: hidden; color: white; margin-top: 40px; }
-.contact-visual { padding: 40px; flex: 1; background: linear-gradient(135deg, #1e293b, #0f172a); }
-.contact-form-area { padding: 40px; flex: 1.2; background: white; color: var(--text); }
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.review-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+
+.review-rating { color: #facc15; margin-bottom: 15px; font-size: 1.1rem; }
+
+.review-text {
+  font-style: italic;
+  color: var(--text);
+  font-size: 1.05rem;
+  margin-bottom: 25px;
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+.client-info { 
+  display: flex; 
+  align-items: center; 
+  gap: 15px; 
+  border-top: 1px solid var(--border); 
+  padding-top: 20px; 
+}
+
+.client-avatar {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, var(--primary), #7c3aed);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.client-name { font-weight: 700; margin: 0; font-size: 1rem; color: var(--text); }
+.client-job { color: var(--text-light); margin: 0; font-size: 0.85rem; }
+
+/* --- FORMULAIRE D'AVIS --- */
+.review-form-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.review-form-header { text-align: center; margin-bottom: 30px; }
+.review-form-header h4 { font-size: 1.7rem; margin-bottom: 10px; color: var(--text); }
+
+.form-row { display: flex; gap: 20px; }
+.input-group { flex: 1; display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+.input-group label { font-weight: 600; font-size: 0.9rem; color: var(--text); }
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+  padding: 14px 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: var(--bg-alt);
+  transition: 0.3s ease;
+}
+
+.input-group input:focus, 
+.input-group select:focus, 
+.input-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
 
 /* --- BOUTONS --- */
 .btn-shine { width: 100%; background: var(--primary); color: white; padding: 15px; border-radius: 10px; border: none; font-weight: 800; cursor: pointer; transition: 0.3s; }
@@ -179,7 +260,7 @@ body {
 
 /* --- RESPONSIVE FINAL --- */
 @media (max-width: 850px) {
-  .hero-inner, .web-grid, .contact-card-premium, .project-with-visual { 
+  .hero-inner, .project-with-visual, .contact-card-premium { 
     flex-direction: column; 
     text-align: center; 
   }
@@ -193,13 +274,7 @@ body {
   
   .skills-grid { flex-direction: column; }
   .skill-card { min-width: 100%; }
-}
-
-/* --- AVIS & FORMULAIRE --- */
-.reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 40px 0; }
-.review-card { background: white; padding: 25px; border-radius: 20px; border: 1px solid var(--border); }
-.review-form-wrapper { max-width: 700px; margin: 40px auto; background: var(--bg-alt); padding: 30px; border-radius: 24px; }
-
-@media (max-width: 650px) {
-  .form-row { flex-direction: column; }
+  
+  .form-row { flex-direction: column; gap: 0; }
+  .review-form-wrapper { padding: 25px; }
 }
