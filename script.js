@@ -22,3 +22,25 @@ document.addEventListener("DOMContentLoaded", function() {
     observer.observe(el);
   });
 });
+// On récupère les éléments
+const modal = document.getElementById("legalModal");
+const btn = document.getElementById("openModal");
+const closeBtn = document.querySelector(".close-btn");
+
+// Ouvrir la modale au clic
+btn.addEventListener("click", (e) => {
+    e.preventDefault(); // Empêche la page de remonter
+    modal.style.display = "block";
+});
+
+// Fermer au clic sur la croix
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+// Fermer si l'utilisateur clique n'importe où en dehors de la modale
+window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
