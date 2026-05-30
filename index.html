@@ -228,7 +228,7 @@
         <p>Pour modifier ou supprimer vos données : <a href="mailto:cyrilbimbi13@gmail.com">cyrilbimbi13@gmail.com</a>.</p>
       
         <h3>3. Conditions Générales de Prestation</h3>
-        <p><strong>Objet :</strong> Les présentes conditions s'appliquent à toutes les prestations de développement web et d'automatisation réalisées par Cyril BIMBI.</p>
+        <p><strong>Objet :</strong> Les présentes conditions s'applient à toutes les prestations de développement web et d'automatisation réalisées par Cyril BIMBI.</p>
         <p><strong>Tarifs et Paiements :</strong> Les prestations sont réalisées aux tarifs en vigueur indiqués sur le devis préalablement accepté et signé par le client.</p>
         <p><strong>Responsabilité :</strong> Le prestataire apporte tout son savoir-faire pour la sécurisation et le bon fonctionnement des outils livrés. Il décline toute responsabilité en cas de mauvaise manipulation, bug, perte de données ou cyberattaque survenant après la livraison de l'outil informatique.</p>
     </div>
@@ -240,6 +240,32 @@
     </div>
 </footer>
 
-  <script src="script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const modal = document.getElementById("legalModal");
+        const btn = document.getElementById("openModal");
+        const closeBtn = document.querySelector(".close-btn");
+
+        if (btn && modal && closeBtn) {
+            // Ouverture au clic
+            btn.addEventListener("click", function(e) {
+                e.preventDefault();
+                modal.style.display = "block";
+            });
+
+            // Fermeture avec la croix
+            closeBtn.addEventListener("click", function() {
+                modal.style.display = "none";
+            });
+
+            // Fermeture en cliquant à côté
+            window.addEventListener("click", function(e) {
+                if (e.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>
