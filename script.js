@@ -22,25 +22,32 @@ document.addEventListener("DOMContentLoaded", function() {
     observer.observe(el);
   });
 });
-// On récupère les éléments
-const modal = document.getElementById("legalModal");
-const btn = document.getElementById("openModal");
-const closeBtn = document.querySelector(".close-btn");
+<script>
+    // Récupération des éléments du DOM
+    const modal = document.getElementById("legalModal");
+    const btn = document.getElementById("openModal");
+    const closeBtn = document.querySelector(".close-btn");
 
-// Ouvrir la modale au clic
-btn.addEventListener("click", (e) => {
-    e.preventDefault(); // Empêche la page de remonter
-    modal.style.display = "block";
-});
+    // Vérification de sécurité pour s'assurer que les éléments existent
+    if (btn && modal && closeBtn) {
+        // Ouvrir la modale au clic sur le lien
+        btn.addEventListener("click", function(e) {
+            e.preventDefault(); // Bloque la remontée de page
+            modal.style.display = "block";
+        });
 
-// Fermer au clic sur la croix
-closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-});
+        // Fermer la modale au clic sur la croix (×)
+        closeBtn.addEventListener("click", function() {
+            modal.style.display = "none";
+        });
 
-// Fermer si l'utilisateur clique n'importe où en dehors de la modale
-window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-        modal.style.display = "none";
+        // Fermer si l'utilisateur clique n'importe où en dehors de la boîte blanche
+        window.addEventListener("click", function(e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    } else {
+        console.error("Erreur : Un ou plusieurs éléments de la modale sont introuvables dans le HTML.");
     }
-});
+</script>
