@@ -339,7 +339,35 @@ body {
   font-size: 1.1rem;
   margin: 0;
 }
+.site-footer {
+  padding: 40px 0; 
+  border-top: 1px solid var(--border); 
+  margin-top: 60px; 
+}
 
+.site-footer .container {
+  display: flex;
+  justify-content: flex-end; /* 💡 MODIFIÉ : Aligne le contenu à droite pour correspondre à ta photo */
+  align-items: center;
+}
+
+.site-footer p {
+  color: var(--text-light); 
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0;
+}
+.site-footer a {
+  color: var(--text-light); /* Utilise la même couleur que ton texte */
+  text-decoration: none;
+  margin-left: 10px; /* Petit espace après la puce • */
+  transition: color 0.2s ease;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+  color: var(--primary); /* Le lien change de couleur au survol si tu as une variable --primary */
+}
 /* Responsive : ajustement de la taille du texte sur mobile */
 @media (max-width: 600px) {
   .site-footer p {
