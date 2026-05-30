@@ -347,8 +347,9 @@ body {
 
 .site-footer .container {
   display: flex;
-  justify-content: flex-end; /* 💡 MODIFIÉ : Aligne le contenu à droite pour correspondre à ta photo */
+  justify-content: center; /* 💡 RECENTRÉ ICI */
   align-items: center;
+  text-align: center;
 }
 
 .site-footer p {
@@ -357,16 +358,16 @@ body {
   font-size: 1.1rem;
   margin: 0;
 }
+
 .site-footer a {
-  color: var(--text-light); /* Utilise la même couleur que ton texte */
-  text-decoration: none;
-  margin-left: 10px; /* Petit espace après la puce • */
-  transition: color 0.2s ease;
+  color: #0056b3; /* Une couleur bleue pour qu'on comprenne que c'est un lien cliquable */
+  text-decoration: underline; /* Souligné pour inviter au clic */
+  margin-left: 10px;
+  cursor: pointer; /* Force le curseur "main" (pointer) au survol */
 }
 
 .site-footer a:hover {
-  text-decoration: underline;
-  color: var(--primary); /* Le lien change de couleur au survol si tu as une variable --primary */
+  color: #003d82;
 }
 /* Responsive : ajustement de la taille du texte sur mobile */
 @media (max-width: 600px) {
