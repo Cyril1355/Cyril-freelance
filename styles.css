@@ -13,6 +13,10 @@
   box-sizing: border-box; 
   scroll-behavior: smooth;
 }
+/* Décale la zone d'arrêt des ancrages pour compenser la hauteur du menu fixe */
+section[id] {
+  scroll-margin-top: 80px; /* Ajuste cette valeur (80px) selon la hauteur de ton header */
+}
 
 body { 
   margin: 0; 
