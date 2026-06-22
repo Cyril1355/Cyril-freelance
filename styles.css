@@ -838,14 +838,26 @@ h1, h2, h3, h4 {
     padding: 40px 20px;
   }
 }
-/* Badge d'accessibilité ajouté pour Google */
 .badge {
   display: inline-block;
-  background: var(--primary-light);
-  color: #1d4ed8; /* Bleu foncé conforme pour le contraste */
+  background: #1d4ed8; /* Un beau bleu roi pro */
+  color: #ffffff;      /* Texte blanc : contraste maximal garanti */
   padding: 6px 14px;
   border-radius: 50px;
   font-size: 0.85rem;
   font-weight: 700;
   margin-bottom: 20px;
+}
+
+.badge-tech {
+  display: inline-block;
+  background: var(--primary); /* Conserve votre bleu électrique d'origine ! */
+  color: #ffffff;             /* Texte blanc pour un contraste parfait */
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
