@@ -144,17 +144,6 @@ h1, h2, h3, h4 {
   justify-content: center;
 }
 
-.badge {
-  display: inline-block;
-  background: var(--primary-light);
-  color: var(--primary);
-  padding: 6px 14px;
-  border-radius: 50px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
 .hero h2 {
   font-size: 2.75rem;
   margin-bottom: 20px;
@@ -288,19 +277,6 @@ h1, h2, h3, h4 {
 
 .project-header {
   margin-bottom: 15px;
-}
-
-.badge-tech {
-  display: inline-block;
-  background: var(--primary-light);
-  color: var(--primary);
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 800;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 .project-card-premium h4 {
@@ -761,7 +737,7 @@ h1, h2, h3, h4 {
 }
 
 .site-footer p {
-  color: #475569;
+  color: #475569; /* Gris foncé contrasté validé par Google */
   font-weight: 600;
   font-size: 1rem;
   margin: 0;
@@ -769,15 +745,15 @@ h1, h2, h3, h4 {
 }
 
 .site-footer p a {
-  color: #1d4ed8;
-  text-decoration: none;
+  color: #1d4ed8; /* Bleu roi contrasté */
+  text-decoration: underline; /* REND LE LIEN RECONNAISSABLE POUR LES MALVOYANTS */
   margin-left: 5px;
   transition: var(--transition);
 }
 
 .site-footer p a:hover {
-  text-decoration: underline;
   color: var(--primary-hover);
+  text-decoration: none; /* Le soulignement s'enlève proprement au survol */
 }
 
 /* ==========================================================================
