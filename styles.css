@@ -761,22 +761,23 @@ h1, h2, h3, h4 {
 }
 
 .site-footer p {
-  color: var(--text-light);
+  color: #475569;
   font-weight: 600;
   font-size: 1rem;
   margin: 0;
   text-align: center;
 }
 
-.site-footer a {
-  color: var(--primary);
+.site-footer p a {
+  color: #1d4ed8;
   text-decoration: none;
   margin-left: 5px;
   transition: var(--transition);
 }
 
-.site-footer a:hover {
+.site-footer p a:hover {
   text-decoration: underline;
+  color: var(--primary-hover);
 }
 
 /* ==========================================================================
@@ -836,4 +837,15 @@ h1, h2, h3, h4 {
   .mockup-content {
     padding: 40px 20px;
   }
+}
+/* Badge d'accessibilité ajouté pour Google */
+.badge {
+  display: inline-block;
+  background: var(--primary-light);
+  color: #1d4ed8; /* Bleu foncé conforme pour le contraste */
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
