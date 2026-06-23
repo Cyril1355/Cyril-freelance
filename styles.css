@@ -837,3 +837,35 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+/* ==========================================================================
+   CORRECTIFS STRUCTURELS POUR LE CLS MOBILE
+   ========================================================================== */
+
+/* 1. Stabilise l'en-tête pour éviter que le menu ne pousse le Hero au chargement */
+@media (max-width: 768px) {
+  .header-inner {
+    min-height: 90px; /* Réserve l'espace exact du menu empilé */
+  }
+}
+
+/* 2. Empêche l'image de l'avatar et les blocs du Hero de changer de taille brutalement */
+.avatar {
+  aspect-ratio: 1 / 1; /* Force le navigateur à réserver un carré parfait avant même que l'image ne charge */
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+}
+
+/* 3. Sécurise le comportement des grilles et conteneurs flex sur mobile */
+@media (max-width: 991px) {
+  .hero-inner {
+    display: block; /* Le block est beaucoup plus stable que le flex inversé au démarrage sur vieux processeurs mobiles */
+  }
+  .hero-left, .hero-right {
+    width: 100%;
+    display: block;
+  }
+  .hero-right {
+    margin-top: 30px; /* Crée l'espace fixe à l'avance */
+  }
+}
